@@ -11,8 +11,8 @@ gerrit_plugin(
     srcs = glob(["src/main/java/**/*.java"]),
     manifest_entries = [
         "Gerrit-PluginName: zookeeper",
-        "Gerrit-Module:",
-        "Implementation-Title:zookeeper plugin",
+        "Gerrit-Module: com.googlesource.gerrit.plugins.validation.dfsrefdb.zookeeper.ZkValidationModule",
+        "Implementation-Title: zookeeper plugin",
         "Implementation-URL: https://review.gerrithub.io/admin/repos/GerritForge/plugins_zookeeper",
     ],
     resources = glob(["src/main/resources/**/*"]),
@@ -21,6 +21,7 @@ gerrit_plugin(
         "@curator-framework//jar",
         "@curator-recipes//jar",
         "@zookeeper//jar",
+        "//plugins/multi-site",
     ],
 )
 
@@ -48,5 +49,6 @@ java_library(
         "@curator-test//jar",
         "@curator-client//jar",
         "@zookeeper//jar",
+        "//plugins/multi-site:multi-site__plugin_test_deps",
     ],
 )
