@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4da148e2_87968e3e",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-09-12T14:56:10Z",
+      "side": 1,
+      "message": "As discussed, this does not build at the moment, as it needs multi-site.\nThe proposal is to depend from a shared-refdb library instead.",
+      "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "d86d29c3_e356cd43",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkConnectionConfig.java",
         "patchSetId": 3
@@ -41,6 +58,69 @@
         "startChar": 17,
         "endLine": 1,
         "endChar": 21
+      },
+      "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca4aaeb9_aac3d53c",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/DummyLockWrapper.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-09-12T14:56:10Z",
+      "side": 1,
+      "message": "Missing license",
+      "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f81cfcf4_b6944107",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/RefFixture.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-09-12T14:56:10Z",
+      "side": 1,
+      "message": "nit: static final are redundant in interfaces and should be removed.",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 15
+      },
+      "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "58d69350_8c8e5f9f",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/RefFixture.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-09-12T14:56:10Z",
+      "side": 1,
+      "message": "this is never used",
+      "range": {
+        "startLine": 29,
+        "startChar": 22,
+        "endLine": 29,
+        "endChar": 41
       },
       "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
