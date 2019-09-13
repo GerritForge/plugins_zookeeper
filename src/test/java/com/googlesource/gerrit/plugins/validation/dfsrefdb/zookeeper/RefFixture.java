@@ -22,17 +22,12 @@ import org.junit.Ignore;
 @Ignore
 public interface RefFixture {
 
-  static final String ALLOWED_CHARS = "abcdefghilmnopqrstuvz";
-  static final String ALLOWED_DIGITS = "1234567890";
-  static final String ALLOWED_NAME_CHARS =
-      ALLOWED_CHARS + ALLOWED_CHARS.toUpperCase() + ALLOWED_DIGITS;
-  static final String A_TEST_PROJECT_NAME = "A_TEST_PROJECT_NAME";
-  static final Project.NameKey A_TEST_PROJECT_NAME_KEY = new Project.NameKey(A_TEST_PROJECT_NAME);
-  static final ObjectId AN_OBJECT_ID_1 = new ObjectId(1, 2, 3, 4, 5);
-  static final ObjectId AN_OBJECT_ID_2 = new ObjectId(1, 2, 3, 4, 6);
-  static final ObjectId AN_OBJECT_ID_3 = new ObjectId(1, 2, 3, 4, 7);
-  static final String A_TEST_REF_NAME = "refs/heads/master";
-  static final String A_REF_NAME_OF_A_PATCHSET = "refs/changes/01/1/1";
+  String A_TEST_PROJECT_NAME = "A_TEST_PROJECT_NAME";
+  Project.NameKey A_TEST_PROJECT_NAME_KEY = new Project.NameKey(A_TEST_PROJECT_NAME);
+  ObjectId AN_OBJECT_ID_1 = new ObjectId(1, 2, 3, 4, 5);
+  ObjectId AN_OBJECT_ID_2 = new ObjectId(1, 2, 3, 4, 6);
+  ObjectId AN_OBJECT_ID_3 = new ObjectId(1, 2, 3, 4, 7);
+  String A_TEST_REF_NAME = "refs/heads/master";
 
   default String aBranchRef() {
     return RefNames.REFS_HEADS + testBranch();
