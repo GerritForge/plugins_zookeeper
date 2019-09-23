@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "aa43733c_1c2ec625",
+        "filename": "BUILD",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:40:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8802f980_50aa64e8",
+      "range": {
+        "startLine": 24,
+        "startChar": 8,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "29e1a3a0_dcde15b9",
         "filename": "WORKSPACE",
         "patchSetId": 4
@@ -59,6 +83,24 @@
     },
     {
       "key": {
+        "uuid": "2edc09b9_df5ff779",
+        "filename": "bazlets.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:40:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5019fafb_1316e431",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f64af609_7b22fa45",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/BatchRefUpdateValidatorTest.java",
         "patchSetId": 4
@@ -73,6 +115,24 @@
       "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ff2a9049_16447a9b",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/BatchRefUpdateValidatorTest.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:40:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f64af609_7b22fa45",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -107,6 +167,23 @@
       "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a114011_30a6ff27",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabaseIT.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:40:09Z",
+      "side": 1,
+      "message": "The whole file is related to the integration between the multi-site plugin and zookeeper, which isn\u0027t the focus of this component.",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
