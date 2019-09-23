@@ -1,0 +1,175 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8802f980_50aa64e8",
+        "filename": "BUILD",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Why multi-site?",
+      "range": {
+        "startLine": 24,
+        "startChar": 8,
+        "endLine": 24,
+        "endChar": 31
+      },
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29e1a3a0_dcde15b9",
+        "filename": "WORKSPACE",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Do we need the standalone build?",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5019fafb_1316e431",
+        "filename": "bazlets.bzl",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Do we really need the standalone build?",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f64af609_7b22fa45",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/BatchRefUpdateValidatorTest.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Why do we need to test the batch-refupdate? The Zookeeper plugin should not make any assumption on the its user and thus not aware of any batch-refupdate validator.",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f4e5d72_282d95f4",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/DisabledSharedRefLogger.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Not used.",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e16926ef_4c069e40",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/DummyLockWrapper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Why do we need this?",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf3c2eca_b54130e8",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabaseIT.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Why do we need to use the SharedRefDatabaseWrapper?",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 36
+      },
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e8a34b40_3fd6addd",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabaseTest.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "Why do we need to use SharedRefDatabaseWrapper?",
+      "range": {
+        "startLine": 57,
+        "startChar": 12,
+        "endLine": 57,
+        "endChar": 36
+      },
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "03d6795b_a377c8b4",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabaseTest.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-23T20:34:33Z",
+      "side": 1,
+      "message": "This test isn\u0027t related to the Zookeeper-based implementation of the Global ref-db.",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
