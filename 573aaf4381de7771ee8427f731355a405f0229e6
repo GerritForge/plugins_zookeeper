@@ -66,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "8b7b2487_4190a6cd",
+        "filename": "WORKSPACE",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-26T13:28:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "29e1a3a0_dcde15b9",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5019fafb_1316e431",
         "filename": "bazlets.bzl",
         "patchSetId": 4
@@ -153,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "6aaa1d58_bae77edf",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/DisabledSharedRefLogger.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-26T13:28:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6f4e5d72_282d95f4",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e16926ef_4c069e40",
         "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/DummyLockWrapper.java",
         "patchSetId": 4
@@ -167,6 +203,24 @@
       "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ec5f4430_68be5797",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/DummyLockWrapper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-26T13:28:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e16926ef_4c069e40",
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -207,6 +261,30 @@
       "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c1fcea9_cfd78c2a",
+        "filename": "src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabaseIT.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-26T13:28:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bf3c2eca_b54130e8",
+      "range": {
+        "startLine": 65,
+        "startChar": 12,
+        "endLine": 65,
+        "endChar": 36
+      },
+      "revId": "573aaf4381de7771ee8427f731355a405f0229e6",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
