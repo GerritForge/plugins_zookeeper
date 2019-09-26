@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "90e32508_2791d89e",
+        "filename": "BUILD",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-26T22:09:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4da148e2_87968e3e",
+      "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d86d29c3_e356cd43",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkConnectionConfig.java",
         "patchSetId": 3
@@ -87,6 +105,30 @@
       "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ec852e4_88e0e706",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkConnectionConfig.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-26T22:09:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "420c1e62_efff1e47",
+      "range": {
+        "startLine": 21,
+        "startChar": 2,
+        "endLine": 21,
+        "endChar": 8
+      },
+      "revId": "49a53fec2a8870b8331bd94d9cee825878e319f7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
