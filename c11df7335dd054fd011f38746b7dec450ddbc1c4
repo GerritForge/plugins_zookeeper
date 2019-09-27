@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00b565da_cc557994",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-09-27T10:58:33Z",
+      "side": 1,
+      "message": "nit: trailing space",
+      "range": {
+        "startLine": 12,
+        "startChar": 27,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6ede44e5_7d857288",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-09-27T10:58:33Z",
+      "side": 1,
+      "message": "nit: this could be done in one step with ln -fs @PLUGIN@/external_plugin_deps.bzl .",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 14,
+        "endChar": 43
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c32426a3_434b6000",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-09-27T10:58:33Z",
+      "side": 1,
+      "message": "What\u0027s the point of having a dynamic ref-database stanza?\nThis plugin is only for zookeeper right?\n\nShouldn\u0027t this just be:\n\n[zookeper]\n\nOr are we leaving the configuration as-is and then planning to do this as a follow-up change?",
+      "range": {
+        "startLine": 13,
+        "startChar": 1,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
