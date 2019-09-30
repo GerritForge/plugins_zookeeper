@@ -46,6 +46,30 @@
       "revId": "09c3d70c67fd0e88126a893f894bf7b2c3eca7de",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b6fe5c00_ae26c7e1",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T15:53:41Z",
+      "side": 1,
+      "message": "what about simply zookeeperhost:2181 and then in the description say \"where zookeeperhost is the host that is running zookeeper\". With regards to 2181, specify that it is the default port for it and you should change it accordingly.\n\nThe @FOO@ notation is for Gerrit to expland :-)",
+      "parentUuid": "a8f2b49b_8594670d",
+      "range": {
+        "startLine": 25,
+        "startChar": 19,
+        "endLine": 25,
+        "endChar": 52
+      },
+      "revId": "09c3d70c67fd0e88126a893f894bf7b2c3eca7de",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
     }
   ]
 }
