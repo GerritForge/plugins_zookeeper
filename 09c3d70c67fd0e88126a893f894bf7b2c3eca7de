@@ -22,6 +22,30 @@
       "revId": "09c3d70c67fd0e88126a893f894bf7b2c3eca7de",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8f2b49b_8594670d",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T12:12:07Z",
+      "side": 1,
+      "message": "Yes so what I should put here? Previously we had \u0027localhost\u0027 I\u0027ve checked how we are defining parameters which should be replaced manually. Only example I\u0027ve found is this one and it\u0027s coming from replication plugin. Is there any guide or template for situations like this?",
+      "parentUuid": "5edd2e98_99cd041f",
+      "range": {
+        "startLine": 25,
+        "startChar": 19,
+        "endLine": 25,
+        "endChar": 52
+      },
+      "revId": "09c3d70c67fd0e88126a893f894bf7b2c3eca7de",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
     }
   ]
 }
