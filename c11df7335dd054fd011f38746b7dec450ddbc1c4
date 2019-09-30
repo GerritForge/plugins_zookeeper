@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "37107812_33d55286",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6f6cbda6_470289ed",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 147
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "35b77e64_3d3f84b6",
         "filename": "src/main/resources/Documentation/about.md",
         "patchSetId": 4
@@ -45,6 +69,30 @@
       "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "68c05114_c6dd4eb2",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "35b77e64_3d3f84b6",
+      "range": {
+        "startLine": 10,
+        "startChar": 40,
+        "endLine": 10,
+        "endChar": 47
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "c310429f_897179be",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "00b565da_cc557994",
+      "range": {
+        "startLine": 12,
+        "startChar": 27,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e4e82df8_23f0a89b",
         "filename": "src/main/resources/Documentation/about.md",
         "patchSetId": 4
@@ -91,6 +163,30 @@
       "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0654b474_cccf2bfc",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4e82df8_23f0a89b",
+      "range": {
+        "startLine": 19,
+        "startChar": 19,
+        "endLine": 19,
+        "endChar": 28
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -137,6 +233,54 @@
       "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7cdb05a3_b9ee40a9",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "59abafee_c3f9dfd8",
+      "range": {
+        "startLine": 3,
+        "startChar": 12,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0e91190_32e8a729",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd4331e0_031f77d2",
+      "range": {
+        "startLine": 3,
+        "startChar": 30,
+        "endLine": 3,
+        "endChar": 35
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -210,6 +354,30 @@
     },
     {
       "key": {
+        "uuid": "684b9f2d_86a38d36",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b31bf31b_21d6db04",
+      "range": {
+        "startLine": 30,
+        "startChar": 20,
+        "endLine": 30,
+        "endChar": 47
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c32426a3_434b6000",
         "filename": "src/main/resources/Documentation/config.md",
         "patchSetId": 4
@@ -280,6 +448,30 @@
     },
     {
       "key": {
+        "uuid": "718f4207_6bf32fdd",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c33282bf_4fd53a17",
+      "range": {
+        "startLine": 14,
+        "startChar": 19,
+        "endLine": 14,
+        "endChar": 28
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "18096154_ae42d59a",
         "filename": "src/main/resources/Documentation/config.md",
         "patchSetId": 4
@@ -300,6 +492,30 @@
       "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b9e71ed_3cbad01f",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "all the configs are copied from multi-site documentation(also those with localhost). I\u0027m going to make them simpler",
+      "parentUuid": "18096154_ae42d59a",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 33
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     },
     {
       "key": {
@@ -326,6 +542,30 @@
     },
     {
       "key": {
+        "uuid": "3709f871_93668505",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eaf70f33_edcaafa6",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 34
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3e5810a9_2d3b42e8",
         "filename": "src/main/resources/Documentation/config.md",
         "patchSetId": 4
@@ -346,6 +586,30 @@
       "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1204d423_eebb0e3d",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-09-30T09:30:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e5810a9_2d3b42e8",
+      "range": {
+        "startLine": 89,
+        "startChar": 20,
+        "endLine": 90,
+        "endChar": 18
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
