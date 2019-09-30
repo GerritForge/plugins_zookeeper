@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "6f6cbda6_470289ed",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "This could be a \"history\" item, however, we should assume that the reader wants to know what it is today.",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 147
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "35b77e64_3d3f84b6",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "Give some context in the overview, so that people know that this is supposed to be used in a clustered environment.",
+      "range": {
+        "startLine": 10,
+        "startChar": 40,
+        "endLine": 10,
+        "endChar": 47
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "00b565da_cc557994",
         "filename": "src/main/resources/Documentation/about.md",
         "patchSetId": 4
@@ -18,6 +64,75 @@
         "startChar": 27,
         "endLine": 12,
         "endChar": 28
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e4e82df8_23f0a89b",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "localhost?",
+      "range": {
+        "startLine": 19,
+        "startChar": 19,
+        "endLine": 19,
+        "endChar": 28
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "59abafee_c3f9dfd8",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "Be more assertive, like:\n\u0027is built\u0027",
+      "range": {
+        "startLine": 3,
+        "startChar": 12,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fd4331e0_031f77d2",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "Specify \"in-tree\" only.",
+      "range": {
+        "startLine": 3,
+        "startChar": 30,
+        "endLine": 3,
+        "endChar": 35
       },
       "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
@@ -48,6 +163,53 @@
     },
     {
       "key": {
+        "uuid": "977d6f81_4d1999fa",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "No, that wouldn\u0027t work. The \u0027-fs\u0027 works only if external_plugin_deps.bzl is already a symlink.",
+      "parentUuid": "6ede44e5_7d857288",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 14,
+        "endChar": 43
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b31bf31b_21d6db04",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "You need only the TEST_DEPS part.",
+      "range": {
+        "startLine": 30,
+        "startChar": 20,
+        "endLine": 30,
+        "endChar": 47
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c32426a3_434b6000",
         "filename": "src/main/resources/Documentation/config.md",
         "patchSetId": 4
@@ -64,6 +226,122 @@
         "startChar": 1,
         "endLine": 13,
         "endChar": 25
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "92393cdd_d360e0e2",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "Yes, I believe the refactoring of the configuration must be a separate change.",
+      "parentUuid": "c32426a3_434b6000",
+      "range": {
+        "startLine": 13,
+        "startChar": 1,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c33282bf_4fd53a17",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "localhost?",
+      "range": {
+        "startLine": 14,
+        "startChar": 19,
+        "endLine": 14,
+        "endChar": 28
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18096154_ae42d59a",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "Those are all defaults, can we make the example simpler?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 33
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eaf70f33_edcaafa6",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "Link to the zookeeper configuration for that?",
+      "range": {
+        "startLine": 50,
+        "startChar": 4,
+        "endLine": 50,
+        "endChar": 34
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e5810a9_2d3b42e8",
+        "filename": "src/main/resources/Documentation/config.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-09-30T06:50:41Z",
+      "side": 1,
+      "message": "Give a more specific context to Zookeeper, not the reference to the multi-site plugin use-case.",
+      "range": {
+        "startLine": 89,
+        "startChar": 20,
+        "endLine": 90,
+        "endChar": 18
       },
       "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
