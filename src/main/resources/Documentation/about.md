@@ -23,7 +23,7 @@ following basic settings. Where `zookeeperhost` is the host that is running zook
 and `2181` is the default zookeeper port, please change them accordingly:
 
 ```
-[ref-database "zookeeper"]
+[zookeeper]
   connectString = "zookeeperhost:2181"
 ```
 

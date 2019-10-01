@@ -59,11 +59,11 @@ public class ZookeeperTestContainerSupport {
     Integer zkHostPort = container.getMappedPort(2181);
     Config sharedRefDbConfig = new Config();
     String connectString = container.getContainerIpAddress() + ":" + zkHostPort;
-    sharedRefDbConfig.setBoolean("ref-database", null, "enabled", true);
-    sharedRefDbConfig.setString("ref-database", "zookeeper", "connectString", connectString);
+    sharedRefDbConfig.setBoolean(ZookeeperConfig.SECTION, null, "enabled", true);
+    sharedRefDbConfig.setString(ZookeeperConfig.SECTION, null, "connectString", connectString);
     sharedRefDbConfig.setString(
-        "ref-database",
-        ZookeeperConfig.SUBSECTION,
+        ZookeeperConfig.SECTION,
+        null,
         ZookeeperConfig.KEY_CONNECT_STRING,
         connectString);
 
