@@ -22,6 +22,30 @@
       "revId": "95772549e26823f4cffa4324a328144324842026",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7f9cd73f_e409c7f1",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-10-01T12:43:24Z",
+      "side": 1,
+      "message": "My intention was to give generic overview how it work in the first part and in the second part give some example of use",
+      "parentUuid": "314c63de_b00a428a",
+      "range": {
+        "startLine": 5,
+        "startChar": 15,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "95772549e26823f4cffa4324a328144324842026",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
     }
   ]
 }
