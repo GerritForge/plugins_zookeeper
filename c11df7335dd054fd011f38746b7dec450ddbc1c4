@@ -355,6 +355,30 @@
     },
     {
       "key": {
+        "uuid": "c316b925_6b4ed819",
+        "filename": "src/main/resources/Documentation/build.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-10-01T08:20:45Z",
+      "side": 1,
+      "message": "It doesn\u0027t really matter, but I don\u0027t think so:\nFrom man[1]: ```-f, --force remove existing destination files```\n\nIn fact, I use this all the time.\nPerhaps I misunderstood your comment.\n\n[1] http://man7.org/linux/man-pages/man1/ln.1.html",
+      "parentUuid": "167cee99_736f359a",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 14,
+        "endChar": 43
+      },
+      "revId": "c11df7335dd054fd011f38746b7dec450ddbc1c4",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b31bf31b_21d6db04",
         "filename": "src/main/resources/Documentation/build.md",
         "patchSetId": 4

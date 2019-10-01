@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "314c63de_b00a428a",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1015244
+      },
+      "writtenOn": "2019-10-01T08:20:45Z",
+      "side": 1,
+      "message": "I might have the wrong side of the stick here, but isn\u0027t this too specific?\n\nI thought one of the reasons to extract the zookeper implementation was also to allow to be used for other goals too, not just for multi-site setups.",
+      "range": {
+        "startLine": 5,
+        "startChar": 15,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "95772549e26823f4cffa4324a328144324842026",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
