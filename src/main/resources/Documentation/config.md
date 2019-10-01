@@ -10,7 +10,7 @@ File '@PLUGIN@.config'
 ## Sample configuration.
 
 ```
-[ref-database "zookeeper"]
+[zookeeper]
   connectString = "zookeeperhost:2181"
   rootNode = "/gerrit/multi-site"
   transactionLockTimeoutMs = 1000
@@ -18,65 +18,65 @@ File '@PLUGIN@.config'
 
 ## Configuration parameters
 
-```ref-database.zookeeper.connectString```
+```zookeeper.connectString```
 :   Connection string to Zookeeper
 
-```ref-database.zookeeper.rootNode```
+```zookeeper.rootNode```
 :   Root node to use in Zookeeper to store/retrieve information
 
     Defaults: "/gerrit/multi-site"
 
 
-```ref-database.zookeeper.sessionTimeoutMs```
+```zookeeper.sessionTimeoutMs```
 :   Zookeeper session timeout in milliseconds
 
     Defaults: 1000
 
-```ref-database.zookeeper.connectionTimeoutMs```
+```zookeeper.connectionTimeoutMs```
 :   Zookeeper connection timeout in milliseconds
 
     Defaults: 1000
 
-```ref-database.zookeeper.retryPolicyBaseSleepTimeMs```
+```zookeeper.retryPolicyBaseSleepTimeMs```
 :   Configuration for the base sleep timeout in milliseconds of the
     [BoundedExponentialBackoffRetry](https://curator.apache.org/apidocs/org/apache/curator/retry/BoundedExponentialBackoffRetry.html) [policy](https://curator.apache.org/curator-client/index.html) used for the Zookeeper connection
 
     Defaults: 1000
 
-```ref-database.zookeeper.retryPolicyMaxSleepTimeMs```
+```zookeeper.retryPolicyMaxSleepTimeMs```
 :   Configuration for the maximum sleep timeout in milliseconds of the
     [BoundedExponentialBackoffRetry](https://curator.apache.org/apidocs/org/apache/curator/retry/BoundedExponentialBackoffRetry.html) [policy](https://curator.apache.org/curator-client/index.html) used for the Zookeeper connection
 
     Defaults: 3000
 
-```ref-database.zookeeper.retryPolicyMaxRetries```
+```zookeeper.retryPolicyMaxRetries```
 :   Configuration for the maximum number of retries of the
     [BoundedExponentialBackoffRetry](https://curator.apache.org/apidocs/org/apache/curator/retry/BoundedExponentialBackoffRetry.html) [policy](https://curator.apache.org/curator-client/index.html) used for the Zookeeper connection
 
     Defaults: 3
 
-```ref-database.zookeeper.casRetryPolicyBaseSleepTimeMs```
+```zookeeper.casRetryPolicyBaseSleepTimeMs```
 :   Configuration for the base sleep timeout in milliseconds of the
     [BoundedExponentialBackoffRetry](https://curator.apache.org/apidocs/org/apache/curator/retry/BoundedExponentialBackoffRetry.html) [policy](https://curator.apache.org/curator-client/index.html) used for the Compare and Swap
     operations on Zookeeper
 
     Defaults: 1000
 
-```ref-database.zookeeper.casRetryPolicyMaxSleepTimeMs```
+```zookeeper.casRetryPolicyMaxSleepTimeMs```
 :   Configuration for the maximum sleep timeout in milliseconds of the
     [BoundedExponentialBackoffRetry](https://curator.apache.org/apidocs/org/apache/curator/retry/BoundedExponentialBackoffRetry.html) [policy](https://curator.apache.org/curator-client/index.html) used for the Compare and Swap
     operations on Zookeeper
 
     Defaults: 3000
 
-```ref-database.zookeeper.casRetryPolicyMaxRetries```
+```zookeeper.casRetryPolicyMaxRetries```
 :   Configuration for the maximum number of retries of the
     [BoundedExponentialBackoffRetry](https://curator.apache.org/apidocs/org/apache/curator/retry/BoundedExponentialBackoffRetry.html) [policy](https://curator.apache.org/curator-client/index.html) used for the Compare and Swap
     operations on Zookeeper
 
     Defaults: 3
 
-```ref-database.zookeeper.transactionLockTimeoutMs```
+```zookeeper.transactionLockTimeoutMs```
 :   Configuration for the Zookeeper Lock timeout (in milliseconds) used when
     acquires the exclusive lock for a reference.
 
