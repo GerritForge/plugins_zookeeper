@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f76e984_d7aae17f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-10-01T22:10:02Z",
+      "side": 1,
+      "message": "Too generic: include the RefFixture and the fact you\u0027re removing unused constants.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 13
+      },
+      "revId": "61348b9f7c1d01c174f9f1d4d75c21c5c55fc545",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
