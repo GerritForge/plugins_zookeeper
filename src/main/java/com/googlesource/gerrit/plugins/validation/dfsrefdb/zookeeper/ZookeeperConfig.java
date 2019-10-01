@@ -48,7 +48,6 @@ public class ZookeeperConfig {
     defaultConnectionTimeoutMs = b.getConnectionTimeoutMs();
   }
 
-  public static final String SUBSECTION = "zookeeper";
   public static final String KEY_CONNECT_STRING = "connectString";
   public static final String KEY_SESSION_TIMEOUT_MS = "sessionTimeoutMs";
   public static final String KEY_CONNECTION_TIMEOUT_MS = "connectionTimeoutMs";
@@ -72,7 +71,7 @@ public class ZookeeperConfig {
   private final int casMaxSleepTimeMs;
   private final int casMaxRetries;
 
-  public static final String SECTION = "ref-database";
+  public static final String SECTION = "zookeeper";
   private final Long transactionLockTimeOut;
 
   private CuratorFramework build;
@@ -81,19 +80,19 @@ public class ZookeeperConfig {
   public ZookeeperConfig(PluginConfigFactory cfgFactory, @PluginName String pluginName) {
     Config zkConfig = cfgFactory.getGlobalPluginConfig(pluginName);
     connectionString =
-        getString(zkConfig, SECTION, SUBSECTION, KEY_CONNECT_STRING, DEFAULT_ZK_CONNECT);
-    root = getString(zkConfig, SECTION, SUBSECTION, KEY_ROOT_NODE, "gerrit/multi-site");
+        getString(zkConfig, SECTION, null, KEY_CONNECT_STRING, DEFAULT_ZK_CONNECT);
+    root = getString(zkConfig, SECTION, null, KEY_ROOT_NODE, "gerrit/multi-site");
     sessionTimeoutMs =
-        getInt(zkConfig, SECTION, SUBSECTION, KEY_SESSION_TIMEOUT_MS, defaultSessionTimeoutMs);
+        getInt(zkConfig, SECTION, null, KEY_SESSION_TIMEOUT_MS, defaultSessionTimeoutMs);
     connectionTimeoutMs =
         getInt(
-            zkConfig, SECTION, SUBSECTION, KEY_CONNECTION_TIMEOUT_MS, defaultConnectionTimeoutMs);
+            zkConfig, SECTION, null, KEY_CONNECTION_TIMEOUT_MS, defaultConnectionTimeoutMs);
 
     baseSleepTimeMs =
         getInt(
             zkConfig,
             SECTION,
-            SUBSECTION,
+            null,
             KEY_RETRY_POLICY_BASE_SLEEP_TIME_MS,
             DEFAULT_RETRY_POLICY_BASE_SLEEP_TIME_MS);
 
@@ -101,7 +100,7 @@ public class ZookeeperConfig {
         getInt(
             zkConfig,
             SECTION,
-            SUBSECTION,
+            null,
             KEY_RETRY_POLICY_MAX_SLEEP_TIME_MS,
             DEFAULT_RETRY_POLICY_MAX_SLEEP_TIME_MS);
 
@@ -109,7 +108,7 @@ public class ZookeeperConfig {
         getInt(
             zkConfig,
             SECTION,
-            SUBSECTION,
+            null,
             KEY_RETRY_POLICY_MAX_RETRIES,
             DEFAULT_RETRY_POLICY_MAX_RETRIES);
 
@@ -117,7 +116,7 @@ public class ZookeeperConfig {
         getInt(
             zkConfig,
             SECTION,
-            SUBSECTION,
+            null,
             KEY_CAS_RETRY_POLICY_BASE_SLEEP_TIME_MS,
             DEFAULT_CAS_RETRY_POLICY_BASE_SLEEP_TIME_MS);
 
@@ -125,7 +124,7 @@ public class ZookeeperConfig {
         getInt(
             zkConfig,
             SECTION,
-            SUBSECTION,
+            null,
             KEY_CAS_RETRY_POLICY_MAX_SLEEP_TIME_MS,
             DEFAULT_CAS_RETRY_POLICY_MAX_SLEEP_TIME_MS);
 
@@ -133,7 +132,7 @@ public class ZookeeperConfig {
         getInt(
             zkConfig,
             SECTION,
-            SUBSECTION,
+            null,
             KEY_CAS_RETRY_POLICY_MAX_RETRIES,
             DEFAULT_CAS_RETRY_POLICY_MAX_RETRIES);
 
@@ -141,7 +140,7 @@ public class ZookeeperConfig {
         getLong(
             zkConfig,
             SECTION,
-            SUBSECTION,
+            null,
             TRANSACTION_LOCK_TIMEOUT_KEY,
             DEFAULT_TRANSACTION_LOCK_TIMEOUT);
 
