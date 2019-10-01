@@ -70,6 +70,30 @@
       "revId": "95772549e26823f4cffa4324a328144324842026",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62979cb8_fbba8a76",
+        "filename": "src/main/resources/Documentation/about.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2019-10-01T19:54:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "02ab40f6_6f8992fb",
+      "range": {
+        "startLine": 5,
+        "startChar": 15,
+        "endLine": 7,
+        "endChar": 41
+      },
+      "revId": "95772549e26823f4cffa4324a328144324842026",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
