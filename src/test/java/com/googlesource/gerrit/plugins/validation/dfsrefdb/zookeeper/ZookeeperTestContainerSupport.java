@@ -19,7 +19,7 @@ import static com.googlesource.gerrit.plugins.validation.dfsrefdb.zookeeper.ZkSh
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import com.google.gerrit.reviewdb.client.Project;
+import com.google.gerrit.entities.Project;
 import com.google.gerrit.server.config.PluginConfigFactory;
 import org.apache.curator.framework.CuratorFramework;
 import org.eclipse.jgit.lib.Config;
