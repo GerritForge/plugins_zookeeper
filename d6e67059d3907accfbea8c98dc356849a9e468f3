@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74825e0f_89fa3ec4",
+        "filename": "external_plugin_deps.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2019-10-28T16:29:10Z",
+      "side": 1,
+      "message": "This is not enough: you need to update the dependency in the pom.xml file also.",
+      "range": {
+        "startLine": 38,
+        "startChar": 49,
+        "endLine": 38,
+        "endChar": 58
+      },
+      "revId": "d6e67059d3907accfbea8c98dc356849a9e468f3",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
