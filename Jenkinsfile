@@ -1,4 +1,7 @@
 pipeline {
+    parameters {
+        string(name: GERRIT_BRANCH, defaultValue: 'stable-3.1')
+    }
     options { checkoutToSubdirectory('zookeeper') }
     agent { label 'bazel-debian' }
     stages {
@@ -20,7 +23,7 @@ pipeline {
         stage('build') {
             steps {
                 gerritReview labels: [Verified: 0], message: "Build started: ${env.BUILD_URL}"
-                sh "git clone --recursive -b stable-3.0 https://gerrit.googlesource.com/gerrit"
+                sh "git clone --recursive -b ${env.GERRIT_BRANCH} https://gerrit.googlesource.com/gerrit"
                 sh 'cd gerrit/plugins && ln -sf ../../zookeeper . && ln -sf zookeeper/external_plugin_deps.bzl .'
                 sh 'cd gerrit && bazel build plugins/zookeeper && bazel test plugins/zookeeper:zookeeper_tests'
             }
