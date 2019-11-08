@@ -1,0 +1,8 @@
+Formatting+1: Jenkins at Gerrit-CI <jenkins@gerritforge.com>
+Verified+1: Jenkins at Gerrit-CI <jenkins@gerritforge.com>
+Code-Review+2: Antonio Barone <syntonyze@gmail.com>
+Submitted-by: Luca Milanesio <luca.milanesio@gmail.com>
+Submitted-at: Fri, 08 Nov 2019 20:39:23 +0000
+Reviewed-on: https://review.gerrithub.io/c/GerritForge/plugins_zookeeper/+/473689
+Project: GerritForge/plugins_zookeeper
+Branch: refs/heads/stable-3.0
