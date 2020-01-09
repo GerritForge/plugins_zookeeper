@@ -117,7 +117,8 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
         new DistributedAtomicValue(client, pathFor(projectName, oldRef), retryPolicy);
 
     try {
-      if (oldRef.getObjectId() == null || oldRef.getObjectId().equals(ObjectId.zeroId())) {
+      if ((oldRef.getObjectId() == null || oldRef.getObjectId().equals(ObjectId.zeroId()))
+          && refNotInZk(projectName, oldRef)) {
         return distributedRefValue.initialize(writeObjectId(newRefValue));
       }
       final ObjectId newValue = newRefValue == null ? ObjectId.zeroId() : newRefValue;
