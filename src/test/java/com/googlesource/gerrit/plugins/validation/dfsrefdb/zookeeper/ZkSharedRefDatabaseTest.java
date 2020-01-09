@@ -92,6 +92,19 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
   }
 
   @Test
+  public void shouldCompareAndPutPreviouslyRemovedRefSuccessfully() throws Exception {
+    Ref ref = refOf(AN_OBJECT_ID_1);
+    Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
+
+    zookeeperContainer.createRefInZk(projectName, ref);
+
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, ObjectId.zeroId())).isTrue();
+
+    Ref zerosRef = refOf(ObjectId.zeroId());
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, zerosRef, AN_OBJECT_ID_1)).isTrue();
+  }
+
+  @Test
   public void compareAndPutShouldFailIfTheObjectionHasNotTheExpectedValue() throws Exception {
     Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
 
