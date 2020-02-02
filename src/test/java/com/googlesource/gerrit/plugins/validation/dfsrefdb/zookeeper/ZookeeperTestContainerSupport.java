@@ -80,7 +80,7 @@ public class ZookeeperTestContainerSupport {
   }
 
   public ObjectId readRefValueFromZk(Project.NameKey projectName, Ref ref) throws Exception {
-    final byte[] bytes = curator.getData().forPath(pathFor(projectName, ref));
+    final byte[] bytes = curator.getData().forPath(pathFor(projectName, ref.getName()));
     return ZkSharedRefDatabase.readObjectId(bytes);
   }
 
@@ -88,6 +88,6 @@ public class ZookeeperTestContainerSupport {
     curator
         .create()
         .creatingParentContainersIfNeeded()
-        .forPath(pathFor(projectName, ref), writeObjectId(ref.getObjectId()));
+        .forPath(pathFor(projectName, ref.getName()), writeObjectId(ref.getObjectId()));
   }
 }
