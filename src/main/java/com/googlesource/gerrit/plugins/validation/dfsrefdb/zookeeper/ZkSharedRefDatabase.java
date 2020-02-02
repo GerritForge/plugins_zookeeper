@@ -23,6 +23,7 @@ import com.google.common.flogger.FluentLogger;
 import com.google.gerrit.reviewdb.client.Project;
 import com.google.inject.Inject;
 import java.nio.charset.StandardCharsets;
+import java.util.Optional;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.atomic.AtomicValue;
@@ -39,12 +40,17 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
   private final RetryPolicy retryPolicy;
 
   private final Long transactionLockTimeOut;
+  private StringToGenericDeserializerFactory stringToGenericDeserializerFactory;
 
   @Inject
-  public ZkSharedRefDatabase(CuratorFramework client, ZkConnectionConfig connConfig) {
+  public ZkSharedRefDatabase(
+      CuratorFramework client,
+      ZkConnectionConfig connConfig,
+      StringToGenericDeserializerFactory stringToGenericDeserializerFactory) {
     this.client = client;
     this.retryPolicy = connConfig.curatorRetryPolicy;
     this.transactionLockTimeOut = connConfig.transactionLockTimeout;
+    this.stringToGenericDeserializerFactory = stringToGenericDeserializerFactory;
   }
 
   @Override
@@ -114,7 +120,7 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
       throws GlobalRefDbSystemError {
 
     final DistributedAtomicValue distributedRefValue =
-        new DistributedAtomicValue(client, pathFor(projectName, oldRef), retryPolicy);
+        new DistributedAtomicValue(client, pathFor(projectName, oldRef.getName()), retryPolicy);
 
     try {
       if ((oldRef.getObjectId() == null || oldRef.getObjectId().equals(ObjectId.zeroId()))
@@ -133,18 +139,68 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
       return newDistributedValue.succeeded();
     } catch (Exception e) {
       logger.atWarning().withCause(e).log(
-          "Error trying to perform CAS at path %s", pathFor(projectName, oldRef));
+          "Error trying to perform CAS at path %s", pathFor(projectName, oldRef.getName()));
       throw new GlobalRefDbSystemError(
-          String.format("Error trying to perform CAS at path %s", pathFor(projectName, oldRef)), e);
+          String.format(
+              "Error trying to perform CAS at path %s", pathFor(projectName, oldRef.getName())),
+          e);
+    }
+  }
+
+  public <T> boolean compareAndPut(
+      Project.NameKey project, String refName, T expectedValue, T newValue)
+      throws GlobalRefDbSystemError {
+
+    final DistributedAtomicValue distributedRefValue =
+        new DistributedAtomicValue(client, pathFor(project, refName), retryPolicy);
+
+    try {
+      if (expectedValue == null && refNotInZk(project, refName)) {
+        return distributedRefValue.initialize(writeGeneric(newValue));
+      }
+
+      final AtomicValue<byte[]> newDistributedValue =
+          distributedRefValue.compareAndSet(writeGeneric(expectedValue), writeGeneric(newValue));
+
+      return newDistributedValue.succeeded();
+    } catch (Exception e) {
+      String message =
+          String.format(
+              "Error trying to perform CAS of generic value at path %s", pathFor(project, refName));
+      logger.atWarning().withCause(e).log(message);
+      throw new GlobalRefDbSystemError(message, e);
+    }
+  }
+
+  @Override
+  public <T> Optional<T> get(Project.NameKey project, String refName, Class<T> clazz)
+      throws GlobalRefDbSystemError {
+    if (!exists(project, refName)) {
+      return Optional.empty();
+    }
+
+    try {
+      final byte[] valueInZk = client.getData().forPath(pathFor(project, refName));
+
+      if (valueInZk == null) {
+        logger.atInfo().log("%s:%s not found in Zookeeper", project, refName);
+        return Optional.empty();
+      }
+
+      return Optional.of(readGenericType(valueInZk, clazz));
+
+    } catch (Exception e) {
+      logger.atSevere().withCause(e).log("Cannot get value for %s:%s", project, refName);
+      return Optional.empty();
     }
   }
 
   private boolean refNotInZk(Project.NameKey projectName, Ref oldRef) throws Exception {
-    return client.checkExists().forPath(pathFor(projectName, oldRef)) == null;
+    return client.checkExists().forPath(pathFor(projectName, oldRef.getName())) == null;
   }
 
-  static String pathFor(Project.NameKey projectName, Ref oldRef) {
-    return pathFor(projectName, oldRef.getName());
+  private boolean refNotInZk(Project.NameKey projectName, String oldRef) throws Exception {
+    return client.checkExists().forPath(pathFor(projectName, oldRef)) == null;
   }
 
   static String pathFor(Project.NameKey projectName, String refName) {
@@ -155,7 +211,19 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
     return ObjectId.fromString(value, 0);
   }
 
+  @SuppressWarnings("unchecked")
+  <T> T readGenericType(byte[] value, Class<T> clazz) throws DeserializerException {
+    StringToGenericDeserializer stringToGenericDeserializer =
+        stringToGenericDeserializerFactory.create(clazz);
+    String str = new String(value, StandardCharsets.US_ASCII);
+    return (T) stringToGenericDeserializer.fromString(str);
+  }
+
   static byte[] writeObjectId(ObjectId value) {
     return ObjectId.toString(value).getBytes(StandardCharsets.US_ASCII);
+  }
+
+  static <T> byte[] writeGeneric(T value) {
+    return value.toString().getBytes(StandardCharsets.US_ASCII);
   }
 }

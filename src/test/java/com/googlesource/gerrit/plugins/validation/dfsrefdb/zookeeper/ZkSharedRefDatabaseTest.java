@@ -16,7 +16,9 @@ package com.googlesource.gerrit.plugins.validation.dfsrefdb.zookeeper;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import com.google.gerrit.extensions.registration.DynamicSet;
 import com.google.gerrit.reviewdb.client.Project;
+import java.util.Optional;
 import org.apache.curator.retry.RetryNTimes;
 import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.lib.ObjectIdRef;
@@ -34,6 +36,16 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
 
   private ZkSharedRefDatabase zkSharedRefDatabase;
 
+  private StringToGenericDeserializerFactory stringToGenericDeserializerFactory =
+      new StringToGenericDeserializerFactory(asDynamicSet());
+
+  private DynamicSet<StringToGenericDeserializer> asDynamicSet() {
+    DynamicSet<StringToGenericDeserializer> result = new DynamicSet<>();
+    result.add("zookeeper", new StringToLongDeserializer());
+    result.add("zookeeper", new StringToIntDeserializer());
+    return result;
+  }
+
   @Before
   public void setup() {
     zookeeperContainer = new ZookeeperTestContainerSupport();
@@ -46,7 +58,8 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
             zookeeperContainer.getCurator(),
             new ZkConnectionConfig(
                 new RetryNTimes(NUMBER_OF_RETRIES, SLEEP_BETWEEN_RETRIES_MS),
-                TRANSACTION_LOCK_TIMEOUT));
+                TRANSACTION_LOCK_TIMEOUT),
+            stringToGenericDeserializerFactory);
   }
 
   @After
@@ -63,6 +76,44 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
     zookeeperContainer.createRefInZk(projectName, oldRef);
 
     assertThat(zkSharedRefDatabase.compareAndPut(projectName, oldRef, newRef.getObjectId()))
+        .isTrue();
+  }
+
+  @Test
+  public void shouldCompareAndPutGenericSuccessfullyNewEntry() {
+    assertThat(
+            zkSharedRefDatabase.compareAndPut(
+                A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, new Object()))
+        .isTrue();
+  }
+
+  @Test
+  public void shouldFailCompareAndPutGenericIfOutOfSync() {
+    Object object1 = new Object();
+    assertThat(
+            zkSharedRefDatabase.compareAndPut(
+                A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, object1))
+        .isTrue();
+
+    Object object2 = new Object();
+    Object object3 = new Object();
+    assertThat(
+            zkSharedRefDatabase.compareAndPut(
+                A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, object2, object3))
+        .isFalse();
+  }
+
+  @Test
+  public void shouldCompareAndPutGenericSuccessfullyUpdateEntry() {
+    Object object1 = new Object();
+    assertThat(
+            zkSharedRefDatabase.compareAndPut(
+                A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, object1))
+        .isTrue();
+    Object object2 = new Object();
+    assertThat(
+            zkSharedRefDatabase.compareAndPut(
+                A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, object1, object2))
         .isTrue();
   }
 
@@ -136,6 +187,45 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
     zkSharedRefDatabase.remove(projectName);
 
     assertThat(getNumChildrenForPath("/")).isEqualTo(0);
+  }
+
+  @Test
+  public void shouldReturnIntValueIfExists() throws Exception {
+    zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, 1);
+    assertThat(
+            zkSharedRefDatabase
+                .get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, Integer.class)
+                .isPresent())
+        .isTrue();
+    assertThat(
+            zkSharedRefDatabase.<Integer>get(
+                A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, Integer.class))
+        .isEqualTo(Optional.of(1));
+  }
+
+  @Test
+  public void shouldReturnLongValueIfExists() throws Exception {
+    zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, 1L);
+    assertThat(
+            zkSharedRefDatabase
+                .get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, Long.class)
+                .isPresent())
+        .isTrue();
+    assertThat(zkSharedRefDatabase.<Long>get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, Long.class))
+        .isEqualTo(Optional.of(1L));
+  }
+
+  @Test
+  public void shouldReturnEmptyIfDoesntExists() throws Exception {
+    Ref ref = refOf(AN_OBJECT_ID_1);
+    Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
+
+    zookeeperContainer.createRefInZk(projectName, ref);
+
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, ObjectId.zeroId())).isTrue();
+
+    Ref zerosRef = refOf(ObjectId.zeroId());
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, zerosRef, AN_OBJECT_ID_1)).isTrue();
   }
 
   @Override
