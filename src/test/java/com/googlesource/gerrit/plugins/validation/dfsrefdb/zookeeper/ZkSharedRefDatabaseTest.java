@@ -67,6 +67,29 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
   }
 
   @Test
+  public void shouldCompareAndPutGenericSuccessfullyNewEntry() {
+    assertThat(zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, new Object())).isTrue();
+  }
+
+  @Test
+  public void shouldFailCompareAndPutGenericIfOutOfSync() {
+    Object object1 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, object1)).isTrue();
+
+    Object object2 = new Object();
+    Object object3 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, object2, object3)).isFalse();
+  }
+
+  @Test
+  public void shouldCompareAndPutGenericSuccessfullyUpdateEntry() {
+    Object object1 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, object1)).isTrue();
+    Object object2 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, object1, object2)).isTrue();
+  }
+
+  @Test
   public void shouldFetchLatestObjectIdInZk() throws Exception {
     Ref oldRef = refOf(AN_OBJECT_ID_1);
     Ref newRef = refOf(AN_OBJECT_ID_2);
@@ -136,6 +159,39 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
     zkSharedRefDatabase.remove(projectName);
 
     assertThat(getNumChildrenForPath("/")).isEqualTo(0);
+  }
+
+  @Test
+  public void shouldReturnValueIfExists() throws Exception {
+    Ref ref = refOf(AN_OBJECT_ID_1);
+    Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
+
+    zookeeperContainer.createRefInZk(projectName, ref);
+
+    assertThat(zkSharedRefDatabase.get(projectName, ref.getName()).isPresent()).isTrue();
+    assertThat(zkSharedRefDatabase.<ObjectId>get(projectName, ref.getName()).get()).isEqualTo(AN_OBJECT_ID_1);
+  }
+
+  @Test
+  public void shouldReturnGenericValueIfExists() throws Exception {
+    Object object1 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, object1)).isTrue();
+
+    assertThat(zkSharedRefDatabase.get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME).isPresent()).isTrue();
+    assertThat(zkSharedRefDatabase.<Object>get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME).get()).isEqualTo(object1);
+  }
+
+  @Test
+  public void shouldReturnEmptyIfDoesntExists() throws Exception {
+    Ref ref = refOf(AN_OBJECT_ID_1);
+    Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
+
+    zookeeperContainer.createRefInZk(projectName, ref);
+
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, ObjectId.zeroId())).isTrue();
+
+    Ref zerosRef = refOf(ObjectId.zeroId());
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, zerosRef, AN_OBJECT_ID_1)).isTrue();
   }
 
   @Override
