@@ -139,6 +139,30 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
     }
   }
 
+  public <T> boolean compareAndPut(Project.NameKey project, Ref ref, T expectedValue, T newValue)
+      throws GlobalRefDbSystemError {
+
+    final DistributedAtomicValue distributedRefValue =
+        new DistributedAtomicValue(client, pathFor(project, ref), retryPolicy);
+
+    try {
+      if (expectedValue == null && refNotInZk(project, ref)) {
+        return distributedRefValue.initialize(writeGeneric(newValue));
+      }
+
+      final AtomicValue<byte[]> newDistributedValue =
+          distributedRefValue.compareAndSet(writeGeneric(expectedValue), writeGeneric(newValue));
+
+      return newDistributedValue.succeeded();
+    } catch (Exception e) {
+      String message =
+          String.format(
+              "Error trying to perform CAS of generic value at path %s", pathFor(project, ref));
+      logger.atWarning().withCause(e).log(message);
+      throw new GlobalRefDbSystemError(message, e);
+    }
+  }
+
   private boolean refNotInZk(Project.NameKey projectName, Ref oldRef) throws Exception {
     return client.checkExists().forPath(pathFor(projectName, oldRef)) == null;
   }
@@ -157,5 +181,9 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
 
   static byte[] writeObjectId(ObjectId value) {
     return ObjectId.toString(value).getBytes(StandardCharsets.US_ASCII);
+  }
+
+  static <T> byte[] writeGeneric(T value) {
+    return value.toString().getBytes(StandardCharsets.US_ASCII);
   }
 }

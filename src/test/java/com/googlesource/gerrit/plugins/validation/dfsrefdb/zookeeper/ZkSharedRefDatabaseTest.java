@@ -67,6 +67,38 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
   }
 
   @Test
+  public void shouldCompareAndPutGenericSuccessfullyNewEntry() throws Exception {
+    Ref ref = refOf(AN_OBJECT_ID_1);
+    Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
+
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, null, new Object())).isTrue();
+  }
+
+  @Test
+  public void shouldFailCompareAndPutGenericIfOutOfSync() throws Exception {
+    Ref ref = refOf(AN_OBJECT_ID_1);
+    Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
+
+    Object object1 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, null, object1)).isTrue();
+
+    Object object2 = new Object();
+    Object object3 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, object2, object3)).isFalse();
+  }
+
+  @Test
+  public void shouldCompareAndPutGenericSuccessfullyUpdateEntry() throws Exception {
+    Ref ref = refOf(AN_OBJECT_ID_1);
+    Project.NameKey projectName = A_TEST_PROJECT_NAME_KEY;
+
+    Object object1 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, null, object1)).isTrue();
+    Object object2 = new Object();
+    assertThat(zkSharedRefDatabase.compareAndPut(projectName, ref, object1, object2)).isTrue();
+  }
+
+  @Test
   public void shouldFetchLatestObjectIdInZk() throws Exception {
     Ref oldRef = refOf(AN_OBJECT_ID_1);
     Ref newRef = refOf(AN_OBJECT_ID_2);
