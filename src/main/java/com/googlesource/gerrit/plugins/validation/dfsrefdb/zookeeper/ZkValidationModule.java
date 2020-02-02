@@ -17,6 +17,7 @@ package com.googlesource.gerrit.plugins.validation.dfsrefdb.zookeeper;
 import com.gerritforge.gerrit.globalrefdb.GlobalRefDatabase;
 import com.google.common.flogger.FluentLogger;
 import com.google.gerrit.extensions.registration.DynamicItem;
+import com.google.gerrit.extensions.registration.DynamicSet;
 import com.google.inject.AbstractModule;
 import com.google.inject.Inject;
 import com.google.inject.Scopes;
@@ -42,5 +43,9 @@ public class ZkValidationModule extends AbstractModule {
     bind(ZkConnectionConfig.class)
         .toInstance(
             new ZkConnectionConfig(cfg.buildCasRetryPolicy(), cfg.getZkInterProcessLockTimeOut()));
+
+    DynamicSet.setOf(binder(), StringToGenericConverter.class);
+    DynamicSet.bind(binder(), StringToGenericConverter.class).to(StringToIntConverter.class);
+    DynamicSet.bind(binder(), StringToGenericConverter.class).to(StringToLongConverter.class);
   }
 }
