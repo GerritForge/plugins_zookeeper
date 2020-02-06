@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "31a4a933_7257579d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2020-02-06T16:12:24Z",
+      "side": 1,
+      "message": "Is that useful? Maybe StringToGenericConverter can be an interface",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 3
+      },
+      "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a3c413a5_3d8f487b",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
         "patchSetId": 3
@@ -18,6 +41,29 @@
         "startChar": 1,
         "endLine": 176,
         "endChar": 0
+      },
+      "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c15932e7_5fb972a8",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkValidationModule.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2020-02-06T16:12:24Z",
+      "side": 1,
+      "message": "To bin to DynamicSet first you have to set it up with DynamicSet.itemOf",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 14
       },
       "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
