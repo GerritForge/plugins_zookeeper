@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3c413a5_3d8f487b",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2020-02-06T15:23:21Z",
+      "side": 1,
+      "message": "I didn\u0027t manage to implement exactly this interface. At line #177 you can see the modified interface I have implemented for the getter. I am passing an extra parameter which is the Class of the generic. You can see the method usage in the tests: https://review.gerrithub.io/c/GerritForge/plugins_zookeeper/+/483581/3/src/test/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabaseTest.java#193\n\nIf you follow the code you will see that the Class type is needed so the \"converter\" factory can instantiate the correct object to cast from String to a Generic object T.\n\nThe only way I have found to get the class type from a generic was some reflection magic tricks, which I haven\u0027t tried yet and I wanted to avoid if possible.\n\nEven if I still need to iron a bit the code, you can get an idea of the direction I am heading to. I wanted to get some early feedbacks from you about:\n- does the general implementation make sense ?\n- is it \"ok\" to pass the class as parameter?\n- can you think of any easy way to get the class type of a generic?",
+      "range": {
+        "startLine": 173,
+        "startChar": 1,
+        "endLine": 176,
+        "endChar": 0
+      },
+      "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
