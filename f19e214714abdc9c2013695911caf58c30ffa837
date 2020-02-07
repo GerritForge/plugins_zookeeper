@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "20501b69_b748c28d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2020-02-07T17:49:21Z",
+      "side": 1,
+      "message": "Nope it isn\u0027t :/ I have been switching between interface and abstract class... and didn\u0027t realise that the last iteration wasn\u0027t needed.",
+      "parentUuid": "31a4a933_7257579d",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 9,
+        "endChar": 3
+      },
+      "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a3c413a5_3d8f487b",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "c04f5762_d7ddcc3b",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2020-02-07T17:49:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a3c413a5_3d8f487b",
+      "range": {
+        "startLine": 173,
+        "startChar": 1,
+        "endLine": 176,
+        "endChar": 0
+      },
+      "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c15932e7_5fb972a8",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkValidationModule.java",
         "patchSetId": 3
@@ -68,6 +116,30 @@
       "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "20e5a1eb_aaff87f5",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkValidationModule.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2020-02-07T17:49:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c15932e7_5fb972a8",
+      "range": {
+        "startLine": 47,
+        "startChar": 4,
+        "endLine": 47,
+        "endChar": 14
+      },
+      "revId": "f19e214714abdc9c2013695911caf58c30ffa837",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
