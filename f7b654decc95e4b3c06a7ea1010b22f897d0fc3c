@@ -1,0 +1,313 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8807ed16_f4f62492",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Copyright missing",
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc46e3a2_c516361a",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Deserializer?",
+      "range": {
+        "startLine": 3,
+        "startChar": 32,
+        "endLine": 3,
+        "endChar": 41
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "caac1c89_3fefe5a0",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Make it generic of \u003cT\u003e",
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7b950efa_130b5ab8",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "not needed in interfaces: all methods are public.",
+      "range": {
+        "startLine": 5,
+        "startChar": 2,
+        "endLine": 5,
+        "endChar": 8
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78b5f322_29f3c69a",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "getTypeClass? \u0027classType\u0027 recalls the type of class, it is instead the class of the type.",
+      "range": {
+        "startLine": 7,
+        "startChar": 9,
+        "endLine": 7,
+        "endChar": 21
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e03929cc_eda1800e",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverter.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Why String? I would just store the Class\u003cT\u003e",
+      "range": {
+        "startLine": 7,
+        "startChar": 2,
+        "endLine": 7,
+        "endChar": 8
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e977e86d_21048731",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverterFactory.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Copyright missing",
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a996f33e_992a6022",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverterFactory.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Deserializer?",
+      "range": {
+        "startLine": 6,
+        "startChar": 28,
+        "endLine": 6,
+        "endChar": 37
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bb45d338_462edc32",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverterFactory.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "private final",
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1d16a4f_e4c2a322",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToGenericConverterFactory.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "No serializer registered fr class \u003c\u003e?",
+      "range": {
+        "startLine": 23,
+        "startChar": 25,
+        "endLine": 23,
+        "endChar": 43
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f398cead_938f7e23",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToIntConverter.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Copyright missing",
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba15ead9_a7071a60",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "Can this be more specific?",
+      "range": {
+        "startLine": 193,
+        "startChar": 13,
+        "endLine": 193,
+        "endChar": 22
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5d6074b0_4a8644ad",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "This can be avoided: just have the caller invoke `pathFor(projectName, oldRef.getName())`",
+      "range": {
+        "startLine": 207,
+        "startChar": 0,
+        "endLine": 209,
+        "endChar": 3
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "555411ee_cf788779",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "This need to be more specific",
+      "range": {
+        "startLine": 226,
+        "startChar": 13,
+        "endLine": 226,
+        "endChar": 22
+      },
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62b2c789_1dde244a",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/ZkSharedRefDatabase.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-02-07T13:53:21Z",
+      "side": 1,
+      "message": "This should be logged when the exception actually originated IMHO, doesn\u0027t really add any extra value.",
+      "revId": "f7b654decc95e4b3c06a7ea1010b22f897d0fc3c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
