@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "96720e47_14bddd2d",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToIntDeserializer.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2020-02-09T08:13:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6c3289b8_6611067f",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 19,
+        "endChar": 37
+      },
+      "revId": "8a2412b9bbae78d05a0029f3d41b7581fd2fc52a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36ba6d83_be286c93",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToLongDeserializer.java",
         "patchSetId": 8
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "03bc458d_86d76d05",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToLongDeserializer.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2020-02-09T08:13:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36ba6d83_be286c93",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 19,
+        "endChar": 38
+      },
+      "revId": "8a2412b9bbae78d05a0029f3d41b7581fd2fc52a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "354f9216_0e2c2eb0",
         "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToObjectIdDeserializer.java",
         "patchSetId": 8
@@ -68,6 +116,30 @@
       "revId": "8a2412b9bbae78d05a0029f3d41b7581fd2fc52a",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "66a2069a_639c5c8b",
+        "filename": "src/main/java/com/googlesource/gerrit/plugins/validation/dfsrefdb/zookeeper/StringToObjectIdDeserializer.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1012541
+      },
+      "writtenOn": "2020-02-09T08:13:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "354f9216_0e2c2eb0",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 42
+      },
+      "revId": "8a2412b9bbae78d05a0029f3d41b7581fd2fc52a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
     }
   ]
 }
