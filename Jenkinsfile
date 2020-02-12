@@ -17,6 +17,20 @@ pipeline {
                 }
             }
         }
+        stage('Copyright') {
+            steps {
+                script {
+                    def formatOut = sh (script: "cd zookeeper && find . -type f -name '*.java'   -exec awk '!/Copyright \(C\) [[:digit:]][[:digit:]][[:digit:]][[:digit:]] The Android Open Source Project/ {print FILENAME} {nextfile}' {} +", returnStdout: true)
+                    if (formatOut.trim()) {
+                        def files = formatOut.split('\n').collect { it.split(' ').last() }
+                        files.each { gerritComment path:it, message: 'Missing Copyright header' }
+                        gerritReview labels: [Formatting: -1]
+                    } else {
+                        gerritReview labels: [Formatting: 1]
+                    }
+                }
+            }
+        }
         stage('build') {
             steps {
                 gerritReview labels: [Verified: 0], message: "Build started: ${env.BUILD_URL}"
