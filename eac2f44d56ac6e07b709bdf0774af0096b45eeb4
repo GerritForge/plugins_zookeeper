@@ -1,0 +1,10 @@
+Verified+1: Fabio Ponciroli <ponch78@gmail.com>
+Verified+1: Jenkins at Gerrit-CI <jenkins@gerritforge.com>
+Formatting+1: Jenkins at Gerrit-CI <jenkins@gerritforge.com>
+Code-Review+2: Marcin Czech <maczech@gmail.com>
+Code-Review+2: Fabio Ponciroli <ponch78@gmail.com>
+Submitted-by: Fabio Ponciroli <ponch78@gmail.com>
+Submitted-at: Thu, 13 Feb 2020 11:13:15 +0000
+Reviewed-on: https://review.gerrithub.io/c/GerritForge/plugins_zookeeper/+/483581
+Project: GerritForge/plugins_zookeeper
+Branch: refs/heads/stable-3.0
