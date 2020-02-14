@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b1f4d0b_a22cf617",
+        "filename": "external_plugin_deps.bzl",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1005270
+      },
+      "writtenOn": "2020-02-14T08:30:19Z",
+      "side": 1,
+      "message": "nit: this should be in follow up change. Usually we are adding a topic so merge and follow up change must be submitted together",
+      "range": {
+        "startLine": 38,
+        "startChar": 49,
+        "endLine": 38,
+        "endChar": 54
+      },
+      "revId": "ec8cbd4de667504e5ce0cc0498dc9a0dc4010fe7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": true
+    }
+  ]
+}
