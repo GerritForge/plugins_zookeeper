@@ -18,11 +18,12 @@ import org.eclipse.jgit.lib.ObjectId;
 
 public class StringToObjectIdDeserializer implements StringDeserializer<ObjectId> {
 
+  @Override
   public Class<ObjectId> getTypeClass() {
     return ObjectId.class;
   }
 
-  @SuppressWarnings("unckecked")
+  @Override
   public ObjectId fromString(String str) {
     return ObjectId.fromString(str);
   }

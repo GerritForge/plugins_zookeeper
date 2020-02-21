@@ -16,11 +16,12 @@ package com.googlesource.gerrit.plugins.validation.dfsrefdb.zookeeper;
 
 public class StringToIntDeserializer implements StringDeserializer<Integer> {
 
+  @Override
   public Class<Integer> getTypeClass() {
     return Integer.class;
   }
 
-  @SuppressWarnings("unckecked")
+  @Override
   public Integer fromString(String str) {
     return Integer.parseInt(str);
   }
