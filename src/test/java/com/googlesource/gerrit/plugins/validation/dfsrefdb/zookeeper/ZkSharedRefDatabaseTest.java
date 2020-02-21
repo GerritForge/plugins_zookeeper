@@ -44,6 +44,7 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
     result.add("zookeeper", new StringToLongDeserializer());
     result.add("zookeeper", new StringToIntDeserializer());
     result.add("zookeeper", new StringToObjectIdDeserializer());
+    result.add("zookeeper", new IdentityDeserializer());
     return result;
   }
 
@@ -214,6 +215,19 @@ public class ZkSharedRefDatabaseTest implements RefFixture {
         .isTrue();
     assertThat(zkSharedRefDatabase.<Long>get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, Long.class))
         .isEqualTo(Optional.of(1L));
+  }
+
+  @Test
+  public void shouldReturnStringValueIfExists() throws Exception {
+    zkSharedRefDatabase.compareAndPut(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, null, "foo");
+    assertThat(
+            zkSharedRefDatabase
+                .get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, String.class)
+                .isPresent())
+        .isTrue();
+    assertThat(
+            zkSharedRefDatabase.<String>get(A_TEST_PROJECT_NAME_KEY, A_TEST_REF_NAME, String.class))
+        .isEqualTo(Optional.of("foo"));
   }
 
   @Test

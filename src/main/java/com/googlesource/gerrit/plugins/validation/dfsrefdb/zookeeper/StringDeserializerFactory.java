@@ -26,10 +26,11 @@ public class StringDeserializerFactory {
     this.stringToGenericDeserializers = stringToGenericDeserializers;
   }
 
-  public StringDeserializer create(final Class clazz) throws DeserializerException {
-    for (StringDeserializer stringDeserializer : stringToGenericDeserializers) {
+  @SuppressWarnings("unchecked")
+  public <T> StringDeserializer<T> create(final Class<T> clazz) throws DeserializerException {
+    for (StringDeserializer<?> stringDeserializer : stringToGenericDeserializers) {
       if (stringDeserializer.getTypeClass().getName().equals(clazz.getTypeName())) {
-        return stringDeserializer;
+        return (StringDeserializer<T>) stringDeserializer;
       }
     }
     throw new DeserializerException("No serializer registered for class " + clazz.getName());
