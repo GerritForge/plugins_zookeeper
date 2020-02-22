@@ -14,17 +14,15 @@
 
 package com.googlesource.gerrit.plugins.validation.dfsrefdb.zookeeper;
 
-import org.eclipse.jgit.lib.ObjectId;
-
-public class StringToObjectIdDeserializer implements StringDeserializer<ObjectId> {
+public class IdentityDeserializer implements StringDeserializer<String> {
 
   @Override
-  public Class<ObjectId> getTypeClass() {
-    return ObjectId.class;
+  public Class<String> getTypeClass() {
+    return String.class;
   }
 
   @Override
-  public ObjectId fromString(String str) {
-    return ObjectId.fromString(str);
+  public String fromString(String str) {
+    return str;
   }
 }
