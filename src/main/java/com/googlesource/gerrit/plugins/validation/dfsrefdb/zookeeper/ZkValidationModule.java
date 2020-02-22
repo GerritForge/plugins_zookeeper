@@ -54,5 +54,8 @@ public class ZkValidationModule extends AbstractModule {
     DynamicSet.bind(binder(), StringDeserializer.class)
         .to(StringToObjectIdDeserializer.class)
         .in(Scopes.SINGLETON);
+    DynamicSet.bind(binder(), StringDeserializer.class)
+        .to(IdentityDeserializer.class)
+        .in(Scopes.SINGLETON);
   }
 }

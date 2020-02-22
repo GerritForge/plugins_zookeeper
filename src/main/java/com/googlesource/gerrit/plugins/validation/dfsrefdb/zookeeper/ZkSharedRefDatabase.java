@@ -147,6 +147,7 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
     }
   }
 
+  @Override
   public <T> boolean compareAndPut(
       Project.NameKey project, String refName, T expectedValue, T newValue)
       throws GlobalRefDbSystemError {

@@ -16,11 +16,12 @@ package com.googlesource.gerrit.plugins.validation.dfsrefdb.zookeeper;
 
 public class StringToLongDeserializer implements StringDeserializer<Long> {
 
+  @Override
   public Class<Long> getTypeClass() {
     return Long.class;
   }
 
-  @SuppressWarnings("unckecked")
+  @Override
   public Long fromString(String str) {
     return Long.parseLong(str);
   }
