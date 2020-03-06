@@ -74,7 +74,7 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
       Boolean isUpToDate = objectIdInSharedRefDb.equals(ref.getObjectId());
 
       if (!isUpToDate) {
-        logger.atWarning().log(
+        logger.atFine().log(
             "%s:%s is out of sync: local=%s zk=%s",
             project, ref.getName(), ref.getObjectId(), objectIdInSharedRefDb);
       }
