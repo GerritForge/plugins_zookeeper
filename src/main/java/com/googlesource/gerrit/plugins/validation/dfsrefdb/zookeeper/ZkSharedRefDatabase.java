@@ -64,7 +64,7 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
 
       // Assuming this is a delete node NULL_REF
       if (valueInZk == null) {
-        logger.atInfo().log(
+        logger.atFine().log(
             "%s:%s not found in Zookeeper, assumed as delete node NULL_REF",
             project, ref.getName());
         return false;
@@ -74,7 +74,7 @@ public class ZkSharedRefDatabase implements GlobalRefDatabase {
       Boolean isUpToDate = objectIdInSharedRefDb.equals(ref.getObjectId());
 
       if (!isUpToDate) {
-        logger.atWarning().log(
+        logger.atFine().log(
             "%s:%s is out of sync: local=%s zk=%s",
             project, ref.getName(), ref.getObjectId(), objectIdInSharedRefDb);
       }
